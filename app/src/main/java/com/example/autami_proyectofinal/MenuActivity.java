@@ -13,6 +13,7 @@ public class MenuActivity extends AppCompatActivity {
     private Button btnBajas;
     private Button btnCambios;
     private Button btnConsultas;
+    private Button btnVerTabla;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class MenuActivity extends AppCompatActivity {
         btnBajas = (Button) findViewById(R.id.btnBajas);
         btnCambios = (Button) findViewById(R.id.btnCambios);
         btnConsultas = (Button) findViewById(R.id.btnConsultas);
+        btnVerTabla = (Button) findViewById(R.id.btnVerTabla);
 
         btnAltas.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,7 +50,22 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        
+        btnConsultas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this, ConsultasActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnVerTabla.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this, TablaActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }
