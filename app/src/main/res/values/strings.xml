@@ -12,5 +12,6 @@
     <string name="consultas">BUSCAR</string>
     <string name="ver_tabla">ver tabla</string>
     <string name="todo">TODO</string>
+    <string name="selecciona">selecciona accion a realizar</string>
 
 </resources>

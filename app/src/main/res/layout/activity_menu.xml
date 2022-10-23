@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#7C7C7C"
     tools:context=".MenuActivity"
     tools:layout_editor_absoluteX="29dp"
     tools:layout_editor_absoluteY="0dp">
@@ -14,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="124dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:text="@string/fabricantes"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,11 +23,11 @@
         android:id="@+id/panelBajas"
         android:layout_width="110dp"
         android:layout_height="110dp"
-        android:layout_marginStart="72dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
-        android:background="#25236A"
+        android:background="#D33D3D"
         app:layout_constraintStart_toEndOf="@+id/panelAltas"
-        app:layout_constraintTop_toBottomOf="@+id/txtFabricantes">
+        app:layout_constraintTop_toBottomOf="@+id/txtSelecciona">
 
         <ImageView
             android:id="@+id/imgBajs"
@@ -47,9 +46,9 @@
         android:id="@+id/panelConsultas"
         android:layout_width="110dp"
         android:layout_height="110dp"
-        android:layout_marginStart="72dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
-        android:background="#25236A"
+        android:background="#56228A"
         app:layout_constraintStart_toEndOf="@+id/panelCambios"
         app:layout_constraintTop_toBottomOf="@+id/btnBajas">
 
@@ -71,11 +70,12 @@
         android:id="@+id/panelAltas"
         android:layout_width="110dp"
         android:layout_height="110dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="20dp"
-        android:background="#25236A"
+        android:background="#235870"
+        android:backgroundTint="@color/purple_500"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFabricantes">
+        app:layout_constraintTop_toBottomOf="@+id/txtSelecciona">
 
         <ImageView
             android:id="@+id/imgAltas"
@@ -94,9 +94,9 @@
         android:id="@+id/panelCambios"
         android:layout_width="110dp"
         android:layout_height="110dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="20dp"
-        android:background="#25236A"
+        android:background="#A64720"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnAltas">
 
@@ -115,12 +115,13 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="292dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
+        android:id="@+id/btnVerTabla"
+        android:layout_width="260dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
         android:height="50dp"
+        android:backgroundTint="@color/purple_500"
         android:text="@string/ver_tabla"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCambios" />
@@ -129,9 +130,10 @@
         android:id="@+id/btnAltas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="10dp"
         android:width="110dp"
+        android:backgroundTint="@color/purple_500"
         android:text="@string/altas"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/panelAltas"
@@ -141,9 +143,10 @@
         android:id="@+id/btnBajas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
         android:width="110dp"
+        android:backgroundTint="#D33D3D"
         android:text="@string/bajas"
         app:layout_constraintStart_toEndOf="@+id/btnAltas"
         app:layout_constraintTop_toBottomOf="@+id/panelBajas" />
@@ -152,9 +155,10 @@
         android:id="@+id/btnCambios"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="10dp"
         android:width="110dp"
+        android:backgroundTint="#A64720"
         android:text="@string/cambios"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/panelCambios" />
@@ -163,11 +167,22 @@
         android:id="@+id/btnConsultas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
         android:width="110dp"
+        android:backgroundTint="#56228A"
         android:text="@string/consultas"
         app:layout_constraintStart_toEndOf="@+id/btnCambios"
         app:layout_constraintTop_toBottomOf="@+id/panelConsultas" />
+
+    <TextView
+        android:id="@+id/txtSelecciona"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/selecciona"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFabricantes" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
