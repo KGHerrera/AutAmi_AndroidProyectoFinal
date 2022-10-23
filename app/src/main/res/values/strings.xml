@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">AutAmi_ProyectoFinal</string>
+    <string name="app_name">AutAmi</string>
+    <string name="iniciar_sesion">INICIAR SESION</string>
+    <string name="login">iniciar</string>
+    <string name="reset">vaciar</string>
+    <string name="username">nombre de usuario</string>
+    <string name="contraseña">contraseña</string>
+
 </resources>
