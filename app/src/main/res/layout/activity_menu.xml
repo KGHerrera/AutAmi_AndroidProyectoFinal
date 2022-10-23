@@ -4,6 +4,170 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuActivity">
+    tools:context=".MenuActivity"
+    tools:layout_editor_absoluteX="29dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <TextView
+        android:id="@+id/txtFabricantes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/fabricantes"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btnConsultas"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        android:background="#25236A"
+        app:layout_constraintStart_toEndOf="@+id/btnCambios"
+        app:layout_constraintTop_toBottomOf="@+id/btnBajas">
+
+        <TextView
+            android:id="@+id/txtConsultas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="@string/consultas"
+            android:textColor="#F6F6F6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.538"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgConsultas"
+            android:layout_width="23dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="33dp"
+            android:contentDescription="@string/altas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/stat_sys_headset" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btnBajas"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:background="#25236A"
+        app:layout_constraintStart_toEndOf="@+id/btnAltas"
+        app:layout_constraintTop_toBottomOf="@+id/txtFabricantes">
+
+        <TextView
+            android:id="@+id/txtBajas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="@string/bajas"
+            android:textColor="#F6F6F6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgBajs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:contentDescription="@string/altas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/stat_sys_download" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btnAltas"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="40dp"
+        android:background="#25236A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFabricantes">
+
+        <TextView
+            android:id="@+id/txtAltas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="@string/altas"
+            android:textColor="#E3E3E3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgAltas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/stat_sys_upload" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btnCambios"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="36dp"
+        android:background="#25236A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAltas">
+
+        <TextView
+            android:id="@+id/txtCambios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="@string/cambios"
+            android:textColor="#F6F6F6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.551"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgCambios"
+            android:layout_width="29dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="31dp"
+            android:contentDescription="@string/altas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/stat_notify_sync" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="220dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/ver_tabla"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConsultas" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

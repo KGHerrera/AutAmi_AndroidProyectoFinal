@@ -5,5 +5,12 @@
     <string name="reset">vaciar</string>
     <string name="username">nombre de usuario</string>
     <string name="contraseña">contraseña</string>
+    <string name="fabricantes">FABRICANTES</string>
+    <string name="altas">ALTAS</string>
+    <string name="bajas">BAJAS</string>
+    <string name="cambios">CAMBIOS</string>
+    <string name="consultas">CONSULTAS</string>
+    <string name="ver_tabla">ver tabla</string>
+    <string name="todo">TODO</string>
 
 </resources>
