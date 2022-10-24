@@ -11,7 +11,12 @@
     <string name="cambios">CAMBIOS</string>
     <string name="consultas">BUSCAR</string>
     <string name="ver_tabla">ver tabla</string>
+    <string name="introduce">introduce los siguientes datos</string>
     <string name="todo">TODO</string>
     <string name="selecciona">selecciona accion a realizar</string>
+    <string name="nombre">nombre</string>
+    <string name="direccion">direccion</string>
+    <string name="telefono">telefono</string>
+    <string name="enviar">enviar</string>
 
 </resources>
