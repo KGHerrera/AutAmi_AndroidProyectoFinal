@@ -18,5 +18,7 @@
     <string name="direccion">direccion</string>
     <string name="telefono">telefono</string>
     <string name="enviar">enviar</string>
+    <string name="eliminar">eliminar</string>
+    <string name="fabricante">id fabricante</string>
 
 </resources>
