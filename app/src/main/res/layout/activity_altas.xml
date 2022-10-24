@@ -104,7 +104,7 @@
         android:id="@+id/btnEnviar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
+        android:layout_marginStart="55dp"
         android:layout_marginTop="21dp"
         android:text="@string/enviar"
         app:layout_constraintStart_toStartOf="parent"
