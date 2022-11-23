@@ -20,16 +20,21 @@ public interface FabricanteDAO {
     void delete(Fabricantes f); //borrar sin SQL
 
     @Query("DELETE FROM fabricantes WHERE idFabricantes = :idf")  //borrar con SQL
-    void eliminarPorIdFrabricante(int idf);
+    int eliminarPorIdFrabricante(int idf);
 
     //Cambios -----------------------------------------------------------------------------
     @Query("UPDATE fabricantes SET nombre= :n, direccion= :d, telefono= :t WHERE idFabricantes = :idf")
-    void modificarPorIdFabricante(String n, String d, String t, int idf);
+    int modificarPorIdFabricante(String n, String d, String t, int idf);
 
     //Consultas-----------------------------------------------------------------------------
+
+    @Query("SELECT * FROM fabricantes WHERE idFabricantes LIKE :id AND " +
+            "nombre LIKE :n AND " + "direccion LIKE :d AND " + "telefono LIKE :t")
+    List<Fabricantes> obtenerConsulta(int id, String n, String d, String t);
+
     @Query("SELECT * FROM fabricantes")
     List<Fabricantes> obtenerTodos();
 
     @Query("SELECT * FROM fabricantes WHERE idFabricantes LIKE :idf")
-    Fabricantes findByNumControl(int idf);
+    Fabricantes findByIdFabricante(int idf);
 }

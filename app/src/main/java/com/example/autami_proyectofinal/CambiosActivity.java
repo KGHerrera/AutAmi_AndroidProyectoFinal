@@ -48,13 +48,17 @@ public class CambiosActivity extends AppCompatActivity {
                 public void run() {
                     try {
                         AutoBD bd = AutoBD.getAppDatabase(getBaseContext());
-                        bd.fabricanteDAO().modificarPorIdFabricante(fabricante.getNombre(),
+                        int resultado = bd.fabricanteDAO().modificarPorIdFabricante(fabricante.getNombre(),
                                 fabricante.getDireccion(), fabricante.getTelefono(), fabricante.getIdFabricantes());
-
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                Toast.makeText(getBaseContext(), "se ejecuto la consulta", Toast.LENGTH_LONG).show();
+                                if(resultado == 1){
+                                    Toast.makeText(getBaseContext(), "se modifico correctamente", Toast.LENGTH_LONG).show();
+                                } else {
+                                    Toast.makeText(getBaseContext(), "no se modifico el id no existe", Toast.LENGTH_LONG).show();
+                                }
+
                             }
                         });
                     } catch (Exception exception) {

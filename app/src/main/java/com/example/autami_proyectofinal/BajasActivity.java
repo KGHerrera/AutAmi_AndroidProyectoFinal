@@ -28,11 +28,15 @@ public class BajasActivity extends AppCompatActivity {
                 public void run() {
                     try {
                         AutoBD bd = AutoBD.getAppDatabase(getBaseContext());
-                        bd.fabricanteDAO().eliminarPorIdFrabricante(Integer.parseInt(cajaID.getText().toString()));
+                        int resultado = bd.fabricanteDAO().eliminarPorIdFrabricante(Integer.parseInt(cajaID.getText().toString()));
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                Toast.makeText(getBaseContext(), "se ejecuto la consulta", Toast.LENGTH_LONG).show();
+                                if(resultado == 1){
+                                    Toast.makeText(getBaseContext(), "se elimino correctamente", Toast.LENGTH_LONG).show();
+                                } else {
+                                    Toast.makeText(getBaseContext(), "no se elimino el id no existe", Toast.LENGTH_LONG).show();
+                                }
                             }
                         });
 
