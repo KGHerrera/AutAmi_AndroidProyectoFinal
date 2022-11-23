@@ -44,13 +44,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
+        android:width="260dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtIdFabricante"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:autofillHints="" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/txtNombreCambio"
@@ -68,13 +69,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
+        android:width="260dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNombreCambio"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:autofillHints="" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/txtDireccionCambios"
@@ -92,13 +94,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
+        android:width="260dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDireccionCambios"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:autofillHints="" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/txtTelefonoCambio"
@@ -116,13 +119,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
+        android:width="260dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="phone"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTelefonoCambio"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:autofillHints="" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/btnModificar"
