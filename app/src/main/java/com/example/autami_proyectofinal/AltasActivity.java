@@ -68,7 +68,7 @@ public class AltasActivity extends AppCompatActivity {
                 }
             }).start();
         } else {
-            
+
             if (!isCajaID){
                 mensaje += " idFabricante";
             }

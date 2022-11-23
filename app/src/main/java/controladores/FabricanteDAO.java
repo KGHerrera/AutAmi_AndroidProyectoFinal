@@ -24,7 +24,7 @@ public interface FabricanteDAO {
 
     //Cambios -----------------------------------------------------------------------------
     @Query("UPDATE fabricantes SET nombre= :n, direccion= :d, telefono= :t WHERE idFabricantes = :idf")
-    void modificarPorNumeroDeControl(String n, String d, String t, int idf);
+    void modificarPorIdFabricante(String n, String d, String t, int idf);
 
     //Consultas-----------------------------------------------------------------------------
     @Query("SELECT * FROM fabricantes")
