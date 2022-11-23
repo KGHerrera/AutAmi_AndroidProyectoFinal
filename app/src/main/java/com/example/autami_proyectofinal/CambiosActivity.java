@@ -26,10 +26,10 @@ public class CambiosActivity extends AppCompatActivity {
 
     public void modificarRegistro(View v) {
         mensaje = "te faltan los datos de [";
-        cajaID = findViewById(R.id.cajaIdFabricanteAlta);
-        cajaNombre = findViewById(R.id.cajaNombre);
-        cajaDireccion = findViewById(R.id.cajaDireccion);
-        cajaTelefono = findViewById(R.id.cajaTelefono);
+        cajaID = findViewById(R.id.cajaIdFabricanteCambios);
+        cajaNombre = findViewById(R.id.cajaNombreCambio);
+        cajaDireccion = findViewById(R.id.cajaDireccionCambios);
+        cajaTelefono = findViewById(R.id.cajaTelefonoCambio);
 
         boolean isCajaID = !cajaID.getText().toString().equals("");
         boolean isCajaNombre = !cajaNombre.getText().toString().equals("");
@@ -54,7 +54,7 @@ public class CambiosActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                Toast.makeText(getBaseContext(), "modificado correctamente", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getBaseContext(), "se ejecuto la consulta", Toast.LENGTH_LONG).show();
                             }
                         });
                     } catch (Exception exception) {
