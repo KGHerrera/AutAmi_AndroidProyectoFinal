@@ -12,8 +12,7 @@ import entidades.Fabricantes;
 @Database(entities = {Fabricantes.class}, version = 1, exportSchema = false)
 public abstract class AutoBD extends RoomDatabase {
 
-    public static FabricanteDAO fabricanteDAO;
-
+    public abstract FabricanteDAO fabricanteDAO();
     private static AutoBD INSTANCE;
     public static AutoBD getAppDatabase(Context context){
         if(INSTANCE == null)

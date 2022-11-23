@@ -7,7 +7,7 @@ import androidx.room.*;
 public class Fabricantes {
     @NonNull
     @PrimaryKey
-    private String idFabricantes;
+    private int idFabricantes;
 
     @NonNull
     @ColumnInfo(name = "nombre")
@@ -21,7 +21,10 @@ public class Fabricantes {
     @ColumnInfo(name = "telefono")
     private String telefono;
 
-    public Fabricantes(@NonNull String idFabricantes, @NonNull String nombre, @NonNull String direccion, @NonNull String telefono) {
+    public Fabricantes() {
+    }
+
+    public Fabricantes(@NonNull int idFabricantes, @NonNull String nombre, @NonNull String direccion, @NonNull String telefono) {
         this.idFabricantes = idFabricantes;
         this.nombre = nombre;
         this.direccion = direccion;
@@ -29,11 +32,11 @@ public class Fabricantes {
     }
 
     @NonNull
-    public String getIdFabricantes() {
+    public int getIdFabricantes() {
         return idFabricantes;
     }
 
-    public void setIdFabricantes(@NonNull String idFabricantes) {
+    public void setIdFabricantes(@NonNull int idFabricantes) {
         this.idFabricantes = idFabricantes;
     }
 
