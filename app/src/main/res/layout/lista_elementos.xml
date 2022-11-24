@@ -19,17 +19,23 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="6dp">
-            <ImageView
-                android:id="@+id/iconImageView"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:paddingLeft="14dp"
-                android:paddingRight="14dp"
-                app:srcCompat="@drawable/account_box"
-                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:id="@+id/idFrabicanteTextView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/teal_700"
+                android:gravity="center"
+                android:text="20980"
+                android:textAlignment="gravity"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+
+                />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -38,10 +44,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="2dp"
-                android:layout_toEndOf="@+id/iconImageView"
+                android:layout_toEndOf="@+id/idFrabicanteTextView"
                 android:orientation="vertical"
-                android:layout_marginLeft="4dp"
-                android:layout_toRightOf="@+id/iconImageView">
+                android:layout_toRightOf="@+id/idFrabicanteTextView">
 
                 <TextView
                     android:id="@+id/nombreTextView"
@@ -50,7 +55,7 @@
                     android:layout_marginBottom="2dp"
                     android:text="kobayashi"
                     android:textColor="@android:color/black"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -66,14 +71,14 @@
                 android:id="@+id/telefonoTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="6dp"
                 android:layout_marginRight="6dp"
                 android:text="4942442499"
-                android:textSize="28sp"
-                android:textStyle="bold"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"/>
+                android:textSize="18sp"
+                android:textStyle="bold" />
         </RelativeLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

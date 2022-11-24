@@ -61,7 +61,7 @@ public class MenuActivity extends AppCompatActivity {
         btnVerTabla.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuActivity.this, TablaActivity.class);
+                Intent intent = new Intent(MenuActivity.this, RecyclerViewActivity.class);
                 startActivity(intent);
             }
         });

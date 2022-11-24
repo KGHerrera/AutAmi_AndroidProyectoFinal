@@ -41,18 +41,18 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     public void setItems(List<Fabricantes> items){ fData = items; }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView iconImage;
-        TextView nombre, direccion, telefono;
+        TextView id, nombre, direccion, telefono;
 
         ViewHolder(View itemView) {
             super(itemView);
-            iconImage = itemView.findViewById(R.id.iconImageView);
+            id = itemView.findViewById(R.id.idFrabicanteTextView);
             nombre = itemView.findViewById(R.id.nombreTextView);
             direccion = itemView.findViewById(R.id.direccionTextView);
             telefono = itemView.findViewById(R.id.telefonoTextView);
         }
 
         void bindData(final Fabricantes item){
+            id.setText(String.valueOf(item.getIdFabricantes()));
             nombre.setText(item.getNombre());
             direccion.setText(item.getDireccion());
             telefono.setText(item.getTelefono());
