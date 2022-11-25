@@ -42,8 +42,6 @@ public class RecyclerViewActivity extends AppCompatActivity {
                             recyclerView.setAdapter(listAdapter);
                         }
                     });
-
-
                 }
             }).start();
         } else {
@@ -69,8 +67,6 @@ public class RecyclerViewActivity extends AppCompatActivity {
                             recyclerView.setAdapter(listAdapter);
                         }
                     });
-
-
                 }
             }).start();
         }

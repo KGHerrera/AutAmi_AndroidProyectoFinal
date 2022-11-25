@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AutAmi</string>
+    <string name="iniciar_sesion">LOG IN</string>
+    <string name="login">start</string>
+    <string name="reset">empty</string>
+    <string name="username">user name</string>
+    <string name="contraseña">password</string>
+    <string name="fabricantes">manufacturers</string>
+    <string name="altas">ADD</string>
+    <string name="bajas">DEL</string>
+    <string name="cambios">CHANGE</string>
+    <string name="consultas">SEARCH</string>
+    <string name="ver_tabla">show manufacturers</string>
+    <string name="introduce">enter the data</string>
+    <string name="todo">ALL</string>
+    <string name="selecciona">select option</string>
+    <string name="nombre">name</string>
+    <string name="direccion">address</string>
+    <string name="telefono">phone number</string>
+    <string name="enviar">send</string>
+    <string name="eliminar">delete</string>
+    <string name="fabricante">id manufacturers</string>
+    <string name="modificar">change</string>
+</resources>
