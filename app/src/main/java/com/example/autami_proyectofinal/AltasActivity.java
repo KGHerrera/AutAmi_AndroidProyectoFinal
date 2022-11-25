@@ -24,6 +24,18 @@ public class AltasActivity extends AppCompatActivity {
         setContentView(R.layout.activity_altas);
     }
 
+    public void btnReset(View v){
+        cajaID = findViewById(R.id.cajaIdFabricanteAlta);
+        cajaNombre = findViewById(R.id.cajaNombre);
+        cajaDireccion = findViewById(R.id.cajaDireccion);
+        cajaTelefono = findViewById(R.id.cajaTelefono);
+
+        cajaID.setText("");
+        cajaNombre.setText("");
+        cajaDireccion.setText("");
+        cajaTelefono.setText("");
+    }
+
     public void agregarRegistro(View v) {
         mensaje = "te faltan los datos de [";
         cajaID = findViewById(R.id.cajaIdFabricanteAlta);

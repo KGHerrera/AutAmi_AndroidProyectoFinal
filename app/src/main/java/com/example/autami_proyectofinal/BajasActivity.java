@@ -21,6 +21,11 @@ public class BajasActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bajas);
     }
 
+    public void btnReset(View v){
+        cajaID = findViewById(R.id.cajaIdFabricanteBaja);
+        cajaID.setText("");
+    }
+
     public void verTablaFabricantes(View v) {
         RecyclerViewActivity.fabricante = fabricante2;
         Intent intent = new Intent(BajasActivity.this, RecyclerViewActivity.class);

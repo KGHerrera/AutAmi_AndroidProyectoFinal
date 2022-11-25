@@ -25,6 +25,18 @@ public class ConsultasActivity extends AppCompatActivity {
         setContentView(R.layout.activity_consultas);
     }
 
+    public void btnReset(View v){
+        cajaID = findViewById(R.id.cajaIdFabricantesConsultas);
+        cajaNombre = findViewById(R.id.cajaNombreConsultas);
+        cajaDireccion = findViewById(R.id.cajaDireccionConsultas);
+        cajaTelefono = findViewById(R.id.cajaTelefonoConsultas);
+
+        cajaID.setText("");
+        cajaNombre.setText("");
+        cajaDireccion.setText("");
+        cajaTelefono.setText("");
+    }
+
     public void obtenerConsulta(View v){
         mensaje = "introduce al menos un dato";
         cajaID = findViewById(R.id.cajaIdFabricantesConsultas);

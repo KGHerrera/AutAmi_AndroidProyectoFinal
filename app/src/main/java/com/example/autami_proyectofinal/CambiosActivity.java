@@ -26,6 +26,18 @@ public class CambiosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cambios);
     }
 
+    public void btnReset(View v){
+        cajaID = findViewById(R.id.cajaIdFabricanteCambios);
+        cajaNombre = findViewById(R.id.cajaNombreCambio);
+        cajaDireccion = findViewById(R.id.cajaDireccionCambios);
+        cajaTelefono = findViewById(R.id.cajaTelefonoCambio);
+
+        cajaID.setText("");
+        cajaNombre.setText("");
+        cajaDireccion.setText("");
+        cajaTelefono.setText("");
+    }
+
     public void verTablaFabricantes(View v) {
         RecyclerViewActivity.fabricante = fabricante2;
         Intent intent = new Intent(CambiosActivity.this, RecyclerViewActivity.class);

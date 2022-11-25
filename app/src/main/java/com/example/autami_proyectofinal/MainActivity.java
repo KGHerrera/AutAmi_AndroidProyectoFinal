@@ -6,10 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button iniciarSesion;
+    private EditText cajaUser;
+    private EditText cajaPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,4 +28,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void restet(View v) {
+        cajaUser = findViewById(R.id.cajaUser);
+        cajaPassword = findViewById(R.id.cajaPassword);
+
+        cajaUser.setText("");
+        cajaPassword.setText("");
+    }
+
+
+
+
 }
