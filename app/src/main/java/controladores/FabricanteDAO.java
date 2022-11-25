@@ -28,9 +28,8 @@ public interface FabricanteDAO {
 
     //Consultas-----------------------------------------------------------------------------
 
-    @Query("SELECT * FROM fabricantes WHERE idFabricantes LIKE :id AND " +
-            "nombre LIKE :n AND " + "direccion LIKE :d AND " + "telefono LIKE :t")
-    List<Fabricantes> obtenerConsulta(int id, String n, String d, String t);
+    @Query("SELECT * FROM fabricantes WHERE idFabricantes LIKE :id AND" + " nombre LIKE :n AND " + "direccion LIKE :d AND " + "telefono LIKE :t")
+    List<Fabricantes> obtenerConsulta(String id, String n, String d, String t);
 
     @Query("SELECT * FROM fabricantes")
     List<Fabricantes> obtenerTodos();
@@ -38,3 +37,6 @@ public interface FabricanteDAO {
     @Query("SELECT * FROM fabricantes WHERE idFabricantes LIKE :idf")
     Fabricantes findByIdFabricante(int idf);
 }
+
+// SELECT * FROM branch WHERE branchNo LIKE "%" AND street LIKE "%56%";
+// SELECT * FROM empleados WHERE id_empleado LIKE "%";

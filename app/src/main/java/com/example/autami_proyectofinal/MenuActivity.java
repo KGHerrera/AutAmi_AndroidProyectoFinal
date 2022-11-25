@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import entidades.Fabricantes;
+
 
 public class MenuActivity extends AppCompatActivity {
     private Button btnAltas;
@@ -14,6 +16,7 @@ public class MenuActivity extends AppCompatActivity {
     private Button btnCambios;
     private Button btnConsultas;
     private Button btnVerTabla;
+    private Fabricantes fabricante;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +64,7 @@ public class MenuActivity extends AppCompatActivity {
         btnVerTabla.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                RecyclerViewActivity.fabricante = fabricante;
                 Intent intent = new Intent(MenuActivity.this, RecyclerViewActivity.class);
                 startActivity(intent);
             }
