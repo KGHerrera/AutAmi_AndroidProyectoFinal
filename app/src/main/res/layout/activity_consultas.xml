@@ -7,6 +7,17 @@
     tools:context=".ConsultasActivity"
     tools:ignore="LabelFor">
 
+    <Button
+        android:id="@+id/btnVaciarConsultas"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#37475A"
+        android:text="@string/reset"
+        app:layout_constraintStart_toEndOf="@+id/btnBuscar"
+        app:layout_constraintTop_toBottomOf="@+id/cajaDireccionConsultas" />
+
     <TextView
         android:id="@+id/txtConsultas"
         android:layout_width="wrap_content"
@@ -19,24 +30,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtSelecciona5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/introduce"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtConsultas" />
-
-    <TextView
         android:id="@+id/txtIdFabricanteConsultas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="60dp"
         android:text="@string/fabricante"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSelecciona5" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/cajaIdFabricantesConsultas"
@@ -44,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
-        android:width="260dp"
+        android:width="250dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="number"
@@ -69,7 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
-        android:width="260dp"
+        android:width="250dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
@@ -94,7 +95,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
-        android:width="260dp"
+        android:width="250dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="phone"
@@ -119,7 +120,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
-        android:width="260dp"
+        android:width="250dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
@@ -130,7 +131,7 @@
 
     <Button
         android:id="@+id/btnBuscar"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"

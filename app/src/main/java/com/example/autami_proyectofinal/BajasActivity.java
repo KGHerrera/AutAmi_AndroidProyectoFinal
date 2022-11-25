@@ -2,20 +2,29 @@ package com.example.autami_proyectofinal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import bd.AutoBD;
+import entidades.Fabricantes;
 
 public class BajasActivity extends AppCompatActivity {
     private EditText cajaID;
+    private Fabricantes fabricante2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bajas);
+    }
+
+    public void verTablaFabricantes(View v) {
+        RecyclerViewActivity.fabricante = fabricante2;
+        Intent intent = new Intent(BajasActivity.this, RecyclerViewActivity.class);
+        startActivity(intent);
     }
 
     public void eliminarRegistro(View v){

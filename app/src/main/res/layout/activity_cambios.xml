@@ -7,6 +7,30 @@
     tools:context=".CambiosActivity"
     tools:ignore="LabelFor">
 
+    <Button
+        android:id="@+id/btnVerTabla3"
+        android:layout_width="250dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        android:height="50dp"
+        android:backgroundTint="#126350"
+        android:onClick="verTablaFabricantes"
+        android:text="@string/ver_tabla"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVaciarCambios" />
+
+    <Button
+        android:id="@+id/btnVaciarCambios"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#37475A"
+        android:text="@string/reset"
+        app:layout_constraintStart_toEndOf="@+id/btnModificar"
+        app:layout_constraintTop_toBottomOf="@+id/cajaTelefonoCambio" />
+
     <TextView
         android:id="@+id/txtCambios"
         android:layout_width="wrap_content"
@@ -19,24 +43,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtSelecciona4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/introduce"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCambios" />
-
-    <TextView
         android:id="@+id/txtIdFabricante"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="60dp"
         android:text="@string/fabricante"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSelecciona4" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/cajaIdFabricanteCambios"
@@ -44,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
-        android:width="260dp"
+        android:width="250dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="number"
@@ -69,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
-        android:width="260dp"
+        android:width="250dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
@@ -94,7 +108,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
-        android:width="260dp"
+        android:width="250dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
@@ -119,7 +133,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
-        android:width="260dp"
+        android:width="250dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="phone"
@@ -130,7 +144,7 @@
 
     <Button
         android:id="@+id/btnModificar"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"

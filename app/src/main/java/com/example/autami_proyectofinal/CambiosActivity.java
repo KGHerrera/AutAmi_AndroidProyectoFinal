@@ -2,6 +2,7 @@ package com.example.autami_proyectofinal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -16,12 +17,19 @@ public class CambiosActivity extends AppCompatActivity {
     private EditText cajaDireccion;
     private EditText cajaTelefono;
     private Fabricantes fabricante = new Fabricantes();
+    private Fabricantes fabricante2;
     private String mensaje;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cambios);
+    }
+
+    public void verTablaFabricantes(View v) {
+        RecyclerViewActivity.fabricante = fabricante2;
+        Intent intent = new Intent(CambiosActivity.this, RecyclerViewActivity.class);
+        startActivity(intent);
     }
 
     public void modificarRegistro(View v) {
@@ -94,4 +102,6 @@ public class CambiosActivity extends AppCompatActivity {
             Toast.makeText(getBaseContext(), mensaje, Toast.LENGTH_LONG).show();
         }
     }
+
+
 }

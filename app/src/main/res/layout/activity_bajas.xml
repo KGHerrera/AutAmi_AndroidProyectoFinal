@@ -7,15 +7,29 @@
     tools:context=".BajasActivity"
     tools:ignore="LabelFor">
 
-    <TextView
-        android:id="@+id/txtSelecciona3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+    <Button
+        android:id="@+id/btnVerTablaBajas"
+        android:layout_width="249dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
-        android:text="@string/introduce"
+        android:height="50dp"
+        android:backgroundTint="#126350"
+        android:onClick="verTablaFabricantes"
+        android:text="@string/ver_tabla"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtBajas" />
+        app:layout_constraintTop_toBottomOf="@+id/btnVaciarBajas" />
+
+    <Button
+        android:id="@+id/btnVaciarBajas"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#37475A"
+        android:text="@string/reset"
+        app:layout_constraintStart_toEndOf="@+id/btnEliminar"
+        app:layout_constraintTop_toBottomOf="@+id/cajaIdFabricanteBaja" />
 
     <TextView
         android:id="@+id/txtBajas"
@@ -33,10 +47,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="60dp"
         android:text="@string/fabricante"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSelecciona3" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/cajaIdFabricanteBaja"
@@ -44,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
-        android:width="260dp"
+        android:width="250dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="number"
@@ -55,7 +69,7 @@
 
     <Button
         android:id="@+id/btnEliminar"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
