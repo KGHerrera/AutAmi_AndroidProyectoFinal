@@ -56,6 +56,7 @@
             android:width="100dp"
             android:backgroundTint="#3847A6"
             android:contentDescription="@string/login"
+            android:onClick="verificarUsuario"
             android:text="@string/login"
             app:layout_constraintStart_toEndOf="@+id/btnReset"
             app:layout_constraintTop_toBottomOf="@+id/cajaPassword"

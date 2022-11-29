@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import bd.AutoBD;
+import bd.FabBD;
 import entidades.Fabricantes;
 
 public class AltasActivity extends AppCompatActivity {
@@ -59,7 +59,7 @@ public class AltasActivity extends AppCompatActivity {
                 @Override
                 public void run() {
                     try {
-                        AutoBD bd = AutoBD.getAppDatabase(getBaseContext());
+                        FabBD bd = FabBD.getAppDatabase(getBaseContext());
                         bd.fabricanteDAO().agregarFabricante(fabricante);
 
                         runOnUiThread(new Runnable() {

@@ -1,7 +1,6 @@
 package com.example.autami_proyectofinal;
 
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import bd.AutoBD;
+import bd.FabBD;
 import entidades.Fabricantes;
 
 public class RecyclerViewActivity extends AppCompatActivity {
@@ -29,7 +28,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    AutoBD bd = AutoBD.getAppDatabase(getBaseContext());
+                    FabBD bd = FabBD.getAppDatabase(getBaseContext());
                     elementos = bd.fabricanteDAO().obtenerTodos();
 
                     runOnUiThread(new Runnable() {
@@ -48,7 +47,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    AutoBD bd = AutoBD.getAppDatabase(getBaseContext());
+                    FabBD bd = FabBD.getAppDatabase(getBaseContext());
 
                     if(fabricante.getIdFabricantes() == 0) elementos =
                             bd.fabricanteDAO().obtenerConsulta("%" ,fabricante.getNombre(),

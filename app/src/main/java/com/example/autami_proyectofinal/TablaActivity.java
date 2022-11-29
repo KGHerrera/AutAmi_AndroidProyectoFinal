@@ -8,7 +8,7 @@ import android.widget.ListView;
 
 import java.util.List;
 
-import bd.AutoBD;
+import bd.FabBD;
 import entidades.Fabricantes;
 
 public class TablaActivity extends AppCompatActivity {
@@ -26,7 +26,7 @@ public class TablaActivity extends AppCompatActivity {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                AutoBD bd = AutoBD.getAppDatabase(getBaseContext());
+                FabBD bd = FabBD.getAppDatabase(getBaseContext());
                 listaFabricantes = bd.fabricanteDAO().obtenerTodos();
 
                 runOnUiThread(new Runnable() {

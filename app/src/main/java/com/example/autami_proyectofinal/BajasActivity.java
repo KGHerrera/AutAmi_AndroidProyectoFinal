@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import bd.AutoBD;
+import bd.FabBD;
 import entidades.Fabricantes;
 
 public class BajasActivity extends AppCompatActivity {
@@ -41,7 +41,7 @@ public class BajasActivity extends AppCompatActivity {
                 @Override
                 public void run() {
                     try {
-                        AutoBD bd = AutoBD.getAppDatabase(getBaseContext());
+                        FabBD bd = FabBD.getAppDatabase(getBaseContext());
                         int resultado = bd.fabricanteDAO().eliminarPorIdFrabricante(Integer.parseInt(cajaID.getText().toString()));
                         runOnUiThread(new Runnable() {
                             @Override

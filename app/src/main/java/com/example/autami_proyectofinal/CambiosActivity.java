@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import bd.AutoBD;
+import bd.FabBD;
 import entidades.Fabricantes;
 
 public class CambiosActivity extends AppCompatActivity {
@@ -67,7 +67,7 @@ public class CambiosActivity extends AppCompatActivity {
                 @Override
                 public void run() {
                     try {
-                        AutoBD bd = AutoBD.getAppDatabase(getBaseContext());
+                        FabBD bd = FabBD.getAppDatabase(getBaseContext());
                         int resultado = bd.fabricanteDAO().modificarPorIdFabricante(fabricante.getNombre(),
                                 fabricante.getDireccion(), fabricante.getTelefono(), fabricante.getIdFabricantes());
                         runOnUiThread(new Runnable() {
