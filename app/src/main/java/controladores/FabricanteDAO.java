@@ -34,6 +34,10 @@ public interface FabricanteDAO {
     @Query("SELECT * FROM fabricantes")
     List<Fabricantes> obtenerTodos();
 
+
+    @Query("SELECT MAX(idFabricantes) FROM fabricantes")
+    int obtenerIdUltimoAgregado();
+
     @Query("SELECT * FROM fabricantes WHERE idFabricantes LIKE :idf")
     Fabricantes findByIdFabricante(int idf);
 }

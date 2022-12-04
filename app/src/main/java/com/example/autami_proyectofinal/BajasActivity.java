@@ -26,6 +26,11 @@ public class BajasActivity extends AppCompatActivity {
         cajaID.setText("");
     }
 
+    public void btnResetNoBoton(){
+        cajaID = findViewById(R.id.cajaIdFabricanteBaja);
+        cajaID.setText("");
+    }
+
     public void verTablaFabricantes(View v) {
         RecyclerViewActivity.fabricante = fabricante2;
         Intent intent = new Intent(BajasActivity.this, RecyclerViewActivity.class);
@@ -51,6 +56,7 @@ public class BajasActivity extends AppCompatActivity {
                                 } else {
                                     Toast.makeText(getBaseContext(), "no se elimino el id no existe", Toast.LENGTH_LONG).show();
                                 }
+                                btnResetNoBoton();
                             }
                         });
 

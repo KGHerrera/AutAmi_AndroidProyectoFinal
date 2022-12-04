@@ -31,14 +31,14 @@
 
         <ImageView
             android:id="@+id/imgBajs"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_marginTop="36dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
             android:contentDescription="@string/altas"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/stat_sys_download" />
+            app:srcCompat="@drawable/ic_baseline_remove_24" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -54,15 +54,14 @@
 
         <ImageView
             android:id="@+id/imgConsultas"
-            android:layout_width="30dp"
-            android:layout_height="32dp"
-            android:layout_marginTop="40dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
             android:contentDescription="@string/altas"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/stat_sys_headset" />
+            app:srcCompat="@drawable/ic_baseline_search_24" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -79,15 +78,16 @@
 
         <ImageView
             android:id="@+id/imgAltas"
-            android:layout_width="35dp"
-            android:layout_height="34dp"
-            android:layout_marginTop="36dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:contentDescription="@string/todo"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.506"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/stat_sys_upload" />
+            app:srcCompat="@drawable/ic_baseline_add_24" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -102,15 +102,15 @@
 
         <ImageView
             android:id="@+id/imgCambios"
-            android:layout_width="38dp"
-            android:layout_height="39dp"
-            android:layout_marginTop="40dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
             android:contentDescription="@string/altas"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.506"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/stat_notify_sync" />
+            app:srcCompat="@drawable/ic_baseline_edit_24" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

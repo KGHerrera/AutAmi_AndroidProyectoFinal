@@ -22,4 +22,5 @@
     <string name="eliminar">delete</string>
     <string name="fabricante">id manufacturers</string>
     <string name="modificar">change</string>
+    <string name="lista_de_fabricantes">Manufacturers List</string>
 </resources>

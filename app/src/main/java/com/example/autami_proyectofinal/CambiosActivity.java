@@ -38,6 +38,20 @@ public class CambiosActivity extends AppCompatActivity {
         cajaTelefono.setText("");
     }
 
+    public void btnResetNoboton(){
+        cajaID = findViewById(R.id.cajaIdFabricanteCambios);
+        cajaNombre = findViewById(R.id.cajaNombreCambio);
+        cajaDireccion = findViewById(R.id.cajaDireccionCambios);
+        cajaTelefono = findViewById(R.id.cajaTelefonoCambio);
+
+        cajaID.setText("");
+        cajaNombre.setText("");
+        cajaDireccion.setText("");
+        cajaTelefono.setText("");
+    }
+
+
+
     public void verTablaFabricantes(View v) {
         RecyclerViewActivity.fabricante = fabricante2;
         Intent intent = new Intent(CambiosActivity.this, RecyclerViewActivity.class);
@@ -75,6 +89,7 @@ public class CambiosActivity extends AppCompatActivity {
                             public void run() {
                                 if(resultado == 1){
                                     Toast.makeText(getBaseContext(), "se modifico correctamente", Toast.LENGTH_LONG).show();
+                                    btnResetNoboton();
                                 } else {
                                     Toast.makeText(getBaseContext(), "no se modifico el id no existe", Toast.LENGTH_LONG).show();
                                 }

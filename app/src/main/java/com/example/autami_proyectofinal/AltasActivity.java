@@ -11,7 +11,6 @@ import bd.FabBD;
 import entidades.Fabricantes;
 
 public class AltasActivity extends AppCompatActivity {
-    private EditText cajaID;
     private EditText cajaNombre;
     private EditText cajaDireccion;
     private EditText cajaTelefono;
@@ -25,12 +24,20 @@ public class AltasActivity extends AppCompatActivity {
     }
 
     public void btnReset(View v){
-        cajaID = findViewById(R.id.cajaIdFabricanteAlta);
         cajaNombre = findViewById(R.id.cajaNombre);
         cajaDireccion = findViewById(R.id.cajaDireccion);
         cajaTelefono = findViewById(R.id.cajaTelefono);
 
-        cajaID.setText("");
+        cajaNombre.setText("");
+        cajaDireccion.setText("");
+        cajaTelefono.setText("");
+    }
+
+    public void btnResetNoBoton(){
+        cajaNombre = findViewById(R.id.cajaNombre);
+        cajaDireccion = findViewById(R.id.cajaDireccion);
+        cajaTelefono = findViewById(R.id.cajaTelefono);
+
         cajaNombre.setText("");
         cajaDireccion.setText("");
         cajaTelefono.setText("");
@@ -38,19 +45,17 @@ public class AltasActivity extends AppCompatActivity {
 
     public void agregarRegistro(View v) {
         mensaje = "te faltan los datos de [";
-        cajaID = findViewById(R.id.cajaIdFabricanteAlta);
+
         cajaNombre = findViewById(R.id.cajaNombre);
         cajaDireccion = findViewById(R.id.cajaDireccion);
         cajaTelefono = findViewById(R.id.cajaTelefono);
 
-        boolean isCajaID = !cajaID.getText().toString().equals("");
+
         boolean isCajaNombre = !cajaNombre.getText().toString().equals("");
         boolean isCajaDireccion = !cajaDireccion.getText().toString().equals("");
         boolean isCajaTelefono = !cajaTelefono.getText().toString().equals("");
 
-        if(isCajaID && isCajaNombre && isCajaDireccion && isCajaTelefono){
-
-            fabricante.setIdFabricantes(Integer.parseInt(cajaID.getText().toString()));
+        if(isCajaNombre && isCajaDireccion && isCajaTelefono){
             fabricante.setNombre(cajaNombre.getText().toString());
             fabricante.setDireccion(cajaDireccion.getText().toString());
             fabricante.setTelefono(cajaTelefono.getText().toString());
@@ -60,6 +65,7 @@ public class AltasActivity extends AppCompatActivity {
                 public void run() {
                     try {
                         FabBD bd = FabBD.getAppDatabase(getBaseContext());
+                        fabricante.setIdFabricantes(bd.fabricanteDAO().obtenerIdUltimoAgregado() + 1);
                         bd.fabricanteDAO().agregarFabricante(fabricante);
 
                         runOnUiThread(new Runnable() {
@@ -73,6 +79,7 @@ public class AltasActivity extends AppCompatActivity {
                             @Override
                             public void run() {
                                 Toast.makeText(getBaseContext(), "ocurrio un error", Toast.LENGTH_LONG).show();
+                                btnResetNoBoton();
                             }
                         });
                     }
@@ -80,10 +87,6 @@ public class AltasActivity extends AppCompatActivity {
                 }
             }).start();
         } else {
-
-            if (!isCajaID){
-                mensaje += " idFabricante";
-            }
 
             if (!isCajaNombre){
                 mensaje += " nombre";
@@ -99,6 +102,7 @@ public class AltasActivity extends AppCompatActivity {
 
             mensaje += " ]";
             Toast.makeText(getBaseContext(), mensaje, Toast.LENGTH_LONG).show();
+
         }
     }
 
