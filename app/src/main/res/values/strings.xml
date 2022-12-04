@@ -22,4 +22,6 @@
     <string name="fabricante">id fabricante</string>
     <string name="modificar">modificar</string>
     <string name="lista_de_fabricantes">Lista de Fabricantes</string>
+    <string name="busqueda_dinamica">busqueda dinamica</string>
+    <string name="campo_magico">campo magico</string>
 </resources>

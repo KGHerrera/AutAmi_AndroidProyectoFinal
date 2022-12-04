@@ -16,6 +16,7 @@ public class MenuActivity extends AppCompatActivity {
     private Button btnCambios;
     private Button btnConsultas;
     private Button btnVerTabla;
+    private Button btnBusqueda;
     private Fabricantes fabricante;
 
     @Override
@@ -28,6 +29,7 @@ public class MenuActivity extends AppCompatActivity {
         btnCambios = (Button) findViewById(R.id.btnCambios);
         btnConsultas = (Button) findViewById(R.id.btnConsultas);
         btnVerTabla = (Button) findViewById(R.id.btnVerTabla);
+        btnBusqueda = (Button) findViewById(R.id.btnBusquedaDinamica);
 
         btnAltas.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +68,15 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 RecyclerViewActivity.fabricante = fabricante;
                 Intent intent = new Intent(MenuActivity.this, RecyclerViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnBusqueda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RecyclerViewActivity.fabricante = fabricante;
+                Intent intent = new Intent(MenuActivity.this, BusquedaAutomaticaActivity.class);
                 startActivity(intent);
             }
         });

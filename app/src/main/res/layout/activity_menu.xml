@@ -24,7 +24,7 @@
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:background="#D33D3D"
         app:layout_constraintStart_toEndOf="@+id/panelAltas"
         app:layout_constraintTop_toBottomOf="@+id/txtFabricantes">
@@ -70,7 +70,7 @@
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:background="#235870"
         android:backgroundTint="@color/purple_500"
         app:layout_constraintStart_toStartOf="parent"
@@ -125,6 +125,19 @@
         android:text="@string/ver_tabla"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCambios" />
+
+    <Button
+        android:id="@+id/btnBusquedaDinamica"
+        android:layout_width="260dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="10dp"
+        android:height="50dp"
+        android:backgroundTint="#0A4861"
+        android:text="@string/busqueda_dinamica"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVerTabla" />
+
     <Button
         android:id="@+id/btnAltas"
         android:layout_width="wrap_content"

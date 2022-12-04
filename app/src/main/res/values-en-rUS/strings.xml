@@ -23,4 +23,6 @@
     <string name="fabricante">id manufacturers</string>
     <string name="modificar">change</string>
     <string name="lista_de_fabricantes">Manufacturers List</string>
+    <string name="busqueda_dinamica">dinamic on track</string>
+    <string name="campo_magico">magic bean</string>
 </resources>

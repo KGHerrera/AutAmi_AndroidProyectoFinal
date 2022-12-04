@@ -34,6 +34,9 @@ public interface FabricanteDAO {
     @Query("SELECT * FROM fabricantes")
     List<Fabricantes> obtenerTodos();
 
+    @Query("SELECT * FROM fabricantes WHERE idFabricantes LIKE :id OR nombre LIKE :n OR direccion LIKE :d OR telefono LIKE :t")
+    List<Fabricantes> obtenerBusquedaDinamica(String id, String n, String d, String t);
+
 
     @Query("SELECT MAX(idFabricantes) FROM fabricantes")
     int obtenerIdUltimoAgregado();
