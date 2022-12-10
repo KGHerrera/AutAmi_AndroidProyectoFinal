@@ -43,10 +43,10 @@ public class ConsultasActivity extends AppCompatActivity {
         cajaDireccion = findViewById(R.id.cajaDireccionConsultas);
         cajaTelefono = findViewById(R.id.cajaTelefonoConsultas);
 
-        boolean isCajaID = !cajaID.getText().toString().equals("");
-        boolean isCajaNombre = !cajaNombre.getText().toString().equals("");
-        boolean isCajaDireccion = !cajaDireccion.getText().toString().equals("");
-        boolean isCajaTelefono = !cajaTelefono.getText().toString().equals("");
+        boolean isCajaID = !cajaID.getText().toString().trim().equals("");
+        boolean isCajaNombre = !cajaNombre.getText().toString().trim().equals("");
+        boolean isCajaDireccion = !cajaDireccion.getText().toString().trim().equals("");
+        boolean isCajaTelefono = !cajaTelefono.getText().toString().trim().equals("");
 
         if(isCajaID || isCajaNombre || isCajaDireccion || isCajaTelefono){
 
@@ -57,19 +57,19 @@ public class ConsultasActivity extends AppCompatActivity {
             }
 
             if(isCajaNombre){
-                fabricante.setNombre( "%" + cajaNombre.getText().toString() + "%");
+                fabricante.setNombre( "%" + cajaNombre.getText().toString().trim() + "%");
             } else{
                 fabricante.setNombre("%");
             }
 
             if(isCajaDireccion){
-                fabricante.setDireccion("%" + cajaDireccion.getText().toString() + "%");
+                fabricante.setDireccion("%" + cajaDireccion.getText().toString().trim() + "%");
             } else{
                 fabricante.setDireccion("%");
             }
 
             if(isCajaTelefono){
-                fabricante.setTelefono("%" + cajaTelefono.getText().toString() + "%");
+                fabricante.setTelefono("%" + cajaTelefono.getText().toString().trim() + "%");
             } else {
                 fabricante.setTelefono("%");
             }

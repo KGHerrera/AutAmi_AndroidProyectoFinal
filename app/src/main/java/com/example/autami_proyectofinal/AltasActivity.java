@@ -51,14 +51,14 @@ public class AltasActivity extends AppCompatActivity {
         cajaTelefono = findViewById(R.id.cajaTelefono);
 
 
-        boolean isCajaNombre = !cajaNombre.getText().toString().equals("");
-        boolean isCajaDireccion = !cajaDireccion.getText().toString().equals("");
-        boolean isCajaTelefono = !cajaTelefono.getText().toString().equals("");
+        boolean isCajaNombre = !cajaNombre.getText().toString().trim().equals("");
+        boolean isCajaDireccion = !cajaDireccion.getText().toString().trim().equals("");
+        boolean isCajaTelefono = !cajaTelefono.getText().toString().trim().equals("");
 
         if(isCajaNombre && isCajaDireccion && isCajaTelefono){
-            fabricante.setNombre(cajaNombre.getText().toString());
-            fabricante.setDireccion(cajaDireccion.getText().toString());
-            fabricante.setTelefono(cajaTelefono.getText().toString());
+            fabricante.setNombre(cajaNombre.getText().toString().trim());
+            fabricante.setDireccion(cajaDireccion.getText().toString().trim());
+            fabricante.setTelefono(cajaTelefono.getText().toString().trim());
 
             new Thread(new Runnable() {
                 @Override
@@ -72,6 +72,7 @@ public class AltasActivity extends AppCompatActivity {
                             @Override
                             public void run() {
                                 Toast.makeText(getBaseContext(), "agregado correctamente", Toast.LENGTH_LONG).show();
+                                btnResetNoBoton();
                             }
                         });
                     } catch (Exception exception){

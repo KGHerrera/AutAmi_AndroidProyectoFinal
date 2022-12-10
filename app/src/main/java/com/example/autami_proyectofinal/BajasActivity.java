@@ -40,14 +40,14 @@ public class BajasActivity extends AppCompatActivity {
     public void eliminarRegistro(View v){
         cajaID = findViewById(R.id.cajaIdFabricanteBaja);
 
-        if(!cajaID.getText().toString().equals("")){
+        if(!cajaID.getText().toString().trim().equals("")){
 
             new Thread(new Runnable() {
                 @Override
                 public void run() {
                     try {
                         FabBD bd = FabBD.getAppDatabase(getBaseContext());
-                        int resultado = bd.fabricanteDAO().eliminarPorIdFrabricante(Integer.parseInt(cajaID.getText().toString()));
+                        int resultado = bd.fabricanteDAO().eliminarPorIdFrabricante(Integer.parseInt(cajaID.getText().toString().trim()));
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {

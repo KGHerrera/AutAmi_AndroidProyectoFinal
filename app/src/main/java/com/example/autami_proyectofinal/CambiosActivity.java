@@ -65,17 +65,16 @@ public class CambiosActivity extends AppCompatActivity {
         cajaDireccion = findViewById(R.id.cajaDireccionCambios);
         cajaTelefono = findViewById(R.id.cajaTelefonoCambio);
 
-        boolean isCajaID = !cajaID.getText().toString().equals("");
-        boolean isCajaNombre = !cajaNombre.getText().toString().equals("");
-        boolean isCajaDireccion = !cajaDireccion.getText().toString().equals("");
-        boolean isCajaTelefono = !cajaTelefono.getText().toString().equals("");
+        boolean isCajaID = !cajaID.getText().toString().trim().equals("");
+        boolean isCajaNombre = !cajaNombre.getText().toString().trim().equals("");
+        boolean isCajaDireccion = !cajaDireccion.getText().toString().trim().equals("");
+        boolean isCajaTelefono = !cajaTelefono.getText().toString().trim().equals("");
 
         if (isCajaID && isCajaNombre && isCajaDireccion && isCajaTelefono) {
-
-            fabricante.setIdFabricantes(Integer.parseInt(cajaID.getText().toString()));
-            fabricante.setNombre(cajaNombre.getText().toString());
-            fabricante.setDireccion(cajaDireccion.getText().toString());
-            fabricante.setTelefono(cajaTelefono.getText().toString());
+            fabricante.setIdFabricantes(Integer.parseInt(cajaID.getText().toString().trim()));
+            fabricante.setNombre(cajaNombre.getText().toString().trim());
+            fabricante.setDireccion(cajaDireccion.getText().toString().trim());
+            fabricante.setTelefono(cajaTelefono.getText().toString().trim());
 
             new Thread(new Runnable() {
                 @Override
